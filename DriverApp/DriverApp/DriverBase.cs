@@ -14,8 +14,8 @@
         public abstract Stats GetStats();
         public abstract void AddPoints(int position);
         public abstract void AddPoints(string position);
+        public abstract void AddPoints(float points);
         
-
         public delegate void PointsAddedDelegate (object sender, EventArgs args);
         public abstract event PointsAddedDelegate PointsAdded;
         public delegate void PositionWithoutPoints (object sender, EventArgs args);

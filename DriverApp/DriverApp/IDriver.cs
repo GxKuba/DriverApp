@@ -8,6 +8,6 @@
         Stats GetStats();
         void AddPoints(int position);
         void AddPoints(string position);
-        
+        void AddPoints(float points);
     }
 }

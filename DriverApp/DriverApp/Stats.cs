@@ -4,9 +4,9 @@ namespace DriverApp
 {
     public class Stats
     {
-        public int Min { get; private set; }
-        public int Max { get; private set; }
-        public int Sum { get; private set; }
+        public float Min { get; private set; }
+        public float Max { get; private set; }
+        public float Sum { get; private set; }
         public int  Count { get; private set; }
         public float Average
         {
@@ -15,6 +15,15 @@ namespace DriverApp
                 return this.Sum / this.Count;
             }
         }
+
+        public float AveragePosition
+        {
+            get
+            {
+                return this.Average / (this.Count*100);
+            }
+        }
+
         public Stats()
         {
             this.Count = 0;
@@ -23,7 +32,7 @@ namespace DriverApp
             this.Min = int.MaxValue;
         }
 
-        public void AddPoints(int point)
+        public void AddPoints(float point)
         {
             this.Count++;
             this.Sum += point;
